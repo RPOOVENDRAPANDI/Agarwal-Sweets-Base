@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar style="background-color: violet">
         <q-btn
           flat
           dense
@@ -10,6 +10,22 @@
           aria-label="Menu"
           @click="toggleLeftDrawerOpen()"
         />
+        <q-toolbar-title> </q-toolbar-title>
+        <div>
+          <img
+            :src="metaIcon"
+            class="icon-class"
+            @click="openNewTab('https://www.facebook.com/')"
+          />
+        </div>
+        &nbsp; &nbsp;
+        <div>
+          <img
+            :src="instaIcon"
+            class="icon-class"
+            @click="openNewTab('https://www.instagram.com/')"
+          />
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -68,10 +84,16 @@ const linksListData = [
   },
 ];
 
-const requiredLinkArray = ref(linksListData);
-const leftDrawerOpen = ref(false);
 const router = useRoute();
 
+const requiredLinkArray = ref(linksListData);
+const leftDrawerOpen = ref(false);
+const metaIcon = ref("src/assets/images/meta_icon.png");
+const instaIcon = ref("src/assets/images/instagram_icon.png");
+
+// Computed Properties
+
+// Methods
 const toggleLeftDrawerOpen = () => {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 };
@@ -82,4 +104,17 @@ const isHomePage = () => {
   }
   return false;
 };
+
+const openNewTab = (url) => {
+  window.open(url);
+};
 </script>
+
+<style>
+.icon-class {
+  height: 25px;
+  width: 25px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+</style>
