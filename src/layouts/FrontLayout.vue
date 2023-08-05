@@ -1,13 +1,14 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar style="background-color: violet">
+      <q-toolbar style="background-color: rgb(234, 243, 237)">
         <q-btn
           flat
           dense
           round
           icon="menu"
           aria-label="Menu"
+          style="color: rgb(154, 154, 231)"
           @click="toggleLeftDrawerOpen()"
         />
         <q-toolbar-title> </q-toolbar-title>
@@ -23,7 +24,7 @@
           <img
             :src="instaIcon"
             class="icon-class"
-            @click="openNewTab('https://www.instagram.com/')"
+            @click="openNewTab('https://www.instagram.com/poovendrar/')"
           />
         </div>
       </q-toolbar>
