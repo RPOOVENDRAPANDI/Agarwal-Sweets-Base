@@ -45,38 +45,27 @@
       </q-carousel-slide>
     </q-carousel>
 
-    <div class="container border-container" style="height: 350px">
-      <div class="row">
-        <div class="col-1"></div>
-        <div class="col-8">
-          <h2 class="about-heading-class">About Agarwhal Bhavan Sweets</h2>
-          <p class="q-ml-lg about-text-class">
-            This is a shop was started by Santhosh Agarwal in Hosur. Later
-            stages, we diversified into multiple brances accross Housr and in
-            Bangalore.
-          </p>
-          <p class="q-ml-lg about-text-class">
-            The vision is to give high quality sweets and snacks to people who
-            trust and visits us.
-          </p>
-        </div>
-        <div class="col-2" style="margin-left: 24px">
-          <q-img
-            :src="founderUrl"
-            spinner-color="white"
-            style="
-              height: 220px;
-              width: 200px;
-              max-width: 200x;
-              margin-top: 50px;
-              min-width: 0;
-            "
-          />
-        </div>
+    <div class="container">
+      <div class="container-item-1">
+        <h2 class="about-heading-class">About Agarwhal Bhavan Sweets</h2>
+        <p class="q-ml-lg about-text-class">
+          This is a shop was started by Santhosh Agarwal in Hosur. Later stages,
+          we diversified into multiple brances accross Housr and in Bangalore.
+        </p>
+        <p class="q-ml-lg about-text-class">
+          The vision is to give high quality sweets and snacks to people who
+          trust and visits us.
+        </p>
+      </div>
+      <div class="container-item-2 q-ml-md">
+        <q-img
+          :src="founderUrl"
+          style="height: 220px; width: 200px; margin-top: 35px"
+        />
       </div>
     </div>
 
-    <q-carousel
+    <!-- <q-carousel
       v-model="secondSlide"
       transition-prev="slide-right"
       transition-next="slide-left"
@@ -118,8 +107,8 @@
           </div>
         </div>
       </q-carousel-slide>
-    </q-carousel>
-    <div class="q-mt-md text-center heading-text-class">Our Products</div>
+    </q-carousel> -->
+    <p class="q-mt-md text-center heading-text-class">Our Products</p>
     <div class="q-mt-sm">
       <q-carousel
         v-model="thirdSlide"
@@ -287,9 +276,10 @@ const secondRowImageArrayTwo = ref([
   transform: scale(1.1)
 
 .heading-text-class
-  font-size: 26px
-  color: black
+  font-size: 35px
+  color: #363636
   font-family: 'Arial', sans-serif
+  font-weight: 450
 
 .about-heading-class
   font-size: 45px
@@ -306,8 +296,9 @@ const secondRowImageArrayTwo = ref([
 
 .container
   display: flex
-  flex-wrap: wrap
   justify-content: center
+  align-items: stretch
+  flex-wrap: wrap
 
 .border-container
   padding: 20px
