@@ -45,6 +45,37 @@
       </q-carousel-slide>
     </q-carousel>
 
+    <div class="container border-container" style="height: 350px">
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-8">
+          <h2 class="about-heading-class">About Agarwhal Bhavan Sweets</h2>
+          <p class="q-ml-lg about-text-class">
+            This is a shop was started by Santhosh Agarwal in Hosur. Later
+            stages, we diversified into multiple brances accross Housr and in
+            Bangalore.
+          </p>
+          <p class="q-ml-lg about-text-class">
+            The vision is to give high quality sweets and snacks to people who
+            trust and visits us.
+          </p>
+        </div>
+        <div class="col-2" style="margin-left: 24px">
+          <q-img
+            :src="founderUrl"
+            spinner-color="white"
+            style="
+              height: 220px;
+              width: 200px;
+              max-width: 200x;
+              margin-top: 50px;
+              min-width: 0;
+            "
+          />
+        </div>
+      </div>
+    </div>
+
     <q-carousel
       v-model="secondSlide"
       transition-prev="slide-right"
@@ -144,6 +175,9 @@ const topSlide = ref("first");
 const secondSlide = ref("first");
 const thirdSlide = ref("first");
 const autoplaySlide = ref(true);
+const founderUrl = ref(
+  "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQAJJE7aVa1WRAcBLjq8SB3Semenl3TsliJlMTTOu8ZzZAN84f9zN62WHEuP59cPTyPHWax-QX6day8vfg"
+);
 
 const secondRowImageArrayOne = ref([
   {
@@ -256,6 +290,31 @@ const secondRowImageArrayTwo = ref([
   font-size: 26px
   color: black
   font-family: 'Arial', sans-serif
+
+.about-heading-class
+  font-size: 45px
+  color: #363636
+  font-family: 'Merriweather', serif
+  margin-left: 23px
+  font-weight: 700
+
+.about-text-class
+  font-size: 15px
+  font-family: 'Merriweather', serif
+  font-weight: 500
+  text-align: left
+
+.container
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+.border-container
+  padding: 20px
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black"><circle cx="10" cy="10" r="5"/></svg>')
+  background-repeat: repeat-x
+  background-size: 20px 20px
+  margin-top: 20px
 
 @media screen and (max-width: 600px)
   .text-overlay

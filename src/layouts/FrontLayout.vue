@@ -44,6 +44,7 @@
     <q-page-container>
       <router-view />
       <HomePage v-if="isHomePage()" />
+      <FooterPage />
     </q-page-container>
   </q-layout>
 </template>
@@ -53,6 +54,7 @@ import { ref } from "vue";
 import { useRoute } from "vue-router";
 import RequiredLink from "src/components/RequiredLink.vue";
 import HomePage from "src/pages/HomePage.vue";
+import FooterPage from "src/pages/FooterPage.vue";
 
 const linksListData = [
   {
